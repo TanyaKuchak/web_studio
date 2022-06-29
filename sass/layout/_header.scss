@@ -1,0 +1,138 @@
+/* .header-list .header-item{
+
+  margin-right: 50px;
+} */
+/* .header-list .header-item:last-child{
+margin-right: 0;
+} */
+/* .header-list .header-item:not(:last-child){
+  margin-right: 50px;
+} */
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    & .nav__item+.nav__item {
+        margin-left: 50px;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primary-font-color);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    & :focus {
+        color: var(--accent-color);
+    }
+}
+
+.nav__item {
+    position: relative;
+}
+
+span {
+    color: var(--accent-color);
+
+    font-family: 'Raleway';
+    @include font(26px, 700, 1.2, null);
+
+}
+
+.header-connect {
+    margin-left: auto;
+}
+
+.connect {
+    display: flex;
+    margin-left: auto;
+
+    & .connect__item+.connect__item {
+        margin-left: 50px;
+    }
+}
+
+.connect__info,
+.connect__tel {
+    @include font(14px, 500, 1.14, 0.02em);
+
+    color: var(--sec-font-color);
+    display: flex;
+    align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    // &:focus,
+    // &:hover,
+    &:focus {
+        color: var(--accent-color);
+        fill: var(--accent-color);
+    }
+}
+
+.connect__info-icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.connect__tel-icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.connect__item {
+    position: relative;
+}
+
+.current {
+    color: var(--accent-color);
+
+    &::after {
+        content: '';
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-color);
+        box-shadow: 0px 1px 2px rgba(44, 42, 42, 0.692), 0px 1px 1px rgba(219, 212, 212, 0.87);
+    }
+}

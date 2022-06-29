@@ -1,0 +1,120 @@
+.portfolio-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* .section-btn {
+  margin-bottom: 50px;
+} */
+
+.portfolio-list .portfolio-item+.portfolio-item {
+    margin-left: 8px;
+}
+
+.portfolio-btn {
+    padding: 6px 22px;
+    border: none;
+
+    background-color: var(--sec-bg-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    @include font(16px, 500, 1.63, 0.03em);
+
+    text-align: center;
+    cursor: pointer;
+
+    color: var(--primary-font-color);
+    border-radius: 4px;
+
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--color-white);
+        background-color: var(--accent-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.content-list>.content-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: var(--content-list-gap);
+    margin-top: var(--content-list-gap);
+}
+
+.content-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: calc(-1 * var(--content-list-gap));
+    margin-left: calc(-1 * var(--content-list-gap));
+}
+
+.content-info {
+    display: block;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.content-thumb {
+    position: relative;
+    overflow: hidden;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-thumb-text {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    /* opacity: 0; */
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    width: 370px;
+    height: 294px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    @include font(18px, 400, 1.56, 0.03em);
+
+
+    color: var(--color-white);
+    background: rgba(33, 150, 243, 0.9);
+
+    .content-info:hover &,
+    .content-info:focus & {
+        transform: translateX(0);
+    }
+}
+
+.portfolio-card {
+    padding: 20px 24px 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: 0;
+}
+
+.content-top-text {
+    @include font(18px, 700, 2, 0.06em);
+    margin-bottom: 4px;
+    color: var(--primary-font-color);
+}
+
+.content-text {
+    @include font(16px, 400, 1.88, null);
+    color: var(--info-font-color);
+}

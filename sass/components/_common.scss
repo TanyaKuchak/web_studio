@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto', 'Tahoma, sans-serif';
+    background-color: var(--color-white);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: var(--primary-font-color);
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 0.86;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-font-color);
+
+}
