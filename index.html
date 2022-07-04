@@ -453,58 +453,61 @@
     <!--                      FOOTER                         -->
     <footer class="footer">
       <div class="contacts container">
-        <div class="contact">
-          <a class="logo logo__footer"><span class="logo-accent logo">Web</span>Studio</a>
-          <address class="contact__address">
-            <ul class="contact__list list">
-              <li class="contact__item">
-                <a
-                  class="contact__link link"
-                  href="https://goo.gl/maps/3nx2QuDcFWaEyub6A"
-                  target="_blank"
-                  rel="noopener nofollow noreferrer"
-                  >г. Киев, пр-т Леси Украинки, 26
-                </a>
+        <div class="contacts__tablet">
+          <div class="contact">
+            <a class="logo logo__footer"><span class="logo-accent logo">Web</span>Studio</a>
+            <address class="contact__address">
+              <ul class="contact__list list">
+                <li class="contact__item">
+                  <a
+                    class="contact__link link"
+                    href="https://goo.gl/maps/3nx2QuDcFWaEyub6A"
+                    target="_blank"
+                    rel="noopener nofollow noreferrer"
+                    >г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="contact__item">
+                  <a class="contact__address link" href="maito:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="contact__item">
+                  <a class="contact__address link" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="soc">
+            <h2 class="soc__invitation">Присоединяйтесь</h2>
+            <ul class="soc__list socials list">
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link-dark link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use></svg
+                ></a>
               </li>
-              <li class="contact__item">
-                <a class="contact__address link" href="maito:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link-dark link"
+                  ><svg class="socials__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use></svg
+                ></a>
               </li>
-              <li class="contact__item">
-                <a class="contact__address link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link-dark link"
+                  ><svg class="socials__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook-1"></use></svg
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link-dark link"
+                  ><svg class="socials__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use></svg
+                ></a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="soc">
-          <h2 class="soc__invitation">Присоединяйтесь</h2>
-          <ul class="soc__list socials list">
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link-dark link">
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use></svg
-              ></a>
-            </li>
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link-dark link"
-                ><svg class="socials__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use></svg
-              ></a>
-            </li>
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link-dark link"
-                ><svg class="socials__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook-1"></use></svg
-              ></a>
-            </li>
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link-dark link"
-                ><svg class="socials__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use></svg
-              ></a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscribe">
           <p class="subscribe__text">Подпишитесь на рассылку</p>
@@ -518,12 +521,14 @@
               class="subscribe__input"
               required
             />
-            <button type="sign-in" class="subscribe__btn">
-              Подписаться
-              <svg class="subscribe__soc-icon" width="24" height="24">
-                <use href="./images/symbol-defs.svg#icon-send"></use>
-              </svg>
-            </button>
+            <div class="footer__btn">
+              <button type="sign-in" class="subscribe__btn">
+                Подписаться
+                <svg class="subscribe__soc-icon" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
