@@ -8,34 +8,34 @@
     text-align: center;
     background-color: var(--footer-bg-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(/images/hero-bg-mob.jpg);
+        url(../images/hero-bg-mob.jpg);
     max-width: 1600px;
     height: 400px;
 
     @include retina {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(/images/hero-bg-mob-2x.jpg);
+            url(../images/hero-bg-mob-2x.jpg);
     }
 
     @media screen and(min-width:768px) {
         height: 400px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(/images/hero-bg-tab.jpg);
+            url(../images/hero-bg-tab.jpg);
 
         @include retina {
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(/images/hero-bg-tab-2x.jpg);
+                url(../images/hero-bg-tab-2x.jpg);
         }
     }
 
     @media screen and(min-width:1200px) {
         height: 600px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(/images/hero-bg-desk.jpg);
+            url(../images/hero-bg-desk.jpg);
 
         @include retina {
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(/images/hero-bg-desk-2x.jpg);
+                url(../images/hero-bg-desk-2x.jpg);
         }
     }
 }
