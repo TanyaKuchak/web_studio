@@ -1,32 +1,66 @@
 .hero {
-    // padding-top: 200px;
-    // padding-bottom: 200px;
-    // margin: 0 auto;
-    background-color: var(--footer-bg-color);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero-bg.jpg);
-    max-width: 1600px;
-    height: 600px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
+    background-color: var(--footer-bg-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/hero-bg-mob.jpg);
+    max-width: 1600px;
+    height: 400px;
 
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(/images/hero-bg-mob-2x.jpg);
+    }
+
+    @media screen and(min-width:768px) {
+        height: 400px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(/images/hero-bg-tab.jpg);
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(/images/hero-bg-tab-2x.jpg);
+        }
+    }
+
+    @media screen and(min-width:1200px) {
+        height: 600px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(/images/hero-bg-desk.jpg);
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(/images/hero-bg-desk-2x.jpg);
+        }
+    }
 }
 
 .hero__title {
-
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: var(--content-list-gap);
-    width: 696px;
-    // margin-left: auto;
-    // margin-right: auto;
+    width: 360px;
 
-    // align-items: center;
-    // justify-content: center;
-    @include font(44px, 900, 1.36, 0.06em);
+    @include font(26px, 900, 1.62, 0.06em);
     text-transform: uppercase;
-
     color: var(--color-white);
+
+
+    @media screen and(min-width:1200px) {
+        width: 696px;
+        @include font(44px, 900, 1.36, 0.06em);
+    }
+
+    @media screen and(max-width:370px) {
+        width: calc(100% - 30px);
+    }
 }
 
 .button {

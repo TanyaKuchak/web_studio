@@ -1,18 +1,27 @@
-.portfolio-list {
+.portfolio-container__list {
     display: flex;
+
+
     justify-content: center;
     margin-bottom: 50px;
+    gap: 15px 8px;
+
+    @media screen and(max-width:768px) {
+        flex-wrap: wrap;
+        gap: 15px 8px;
+        justify-content: left;
+    }
 }
 
 /* .section-btn {
   margin-bottom: 50px;
 } */
 
-.portfolio-list .portfolio-item+.portfolio-item {
+.portfolio-container__list .portfolio-container__item+.portfolio-container__item {
     margin-left: 8px;
 }
 
-.portfolio-btn {
+.portfolio-container__btn {
     padding: 6px 22px;
     border: none;
 
@@ -40,22 +49,34 @@
     }
 }
 
-.content-list>.content-item {
-    flex-basis: calc(100% / 3 - 30px);
+.portfolio-container__content-list>.portfolio-container__content-item {
+    @media screen and(min-width:768px) {
+        flex-basis: calc(100% / 2 - 30px);
+    }
+
+    @media screen and(min-width:1200px) {
+        flex-basis: calc(100% / 3 - 30px);
+    }
+
     margin-left: var(--content-list-gap);
     margin-top: var(--content-list-gap);
 }
 
-.content-list {
+.portfolio-container__content-list {
     display: flex;
     flex-wrap: wrap;
+    // padding-inline-start: 0;
 
     margin-top: calc(-1 * var(--content-list-gap));
     margin-left: calc(-1 * var(--content-list-gap));
 }
 
-.content-info {
-    display: block;
+// .content-item {}
+
+.portfolio-container__content-info {
+    // display: block;
+    display: flex;
+    flex-direction: column;
 
     transition-property: box-shadow;
     transition-duration: 250ms;
@@ -68,13 +89,23 @@
     }
 }
 
+.portfolio-container__content-item:first-child {
+    height: 100%;
+    flex-grow: 1;
+
+}
+
+.portfolio-card:first-child {
+    flex-grow: 1;
+}
+
 .content-thumb {
     position: relative;
     overflow: hidden;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.content-thumb-text {
+.content-thumb__text {
     position: absolute;
     display: inline-block;
     top: 0;
@@ -84,20 +115,18 @@
 
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    width: 370px;
+    width: 100%;
     height: 294px;
-
     font-family: 'Roboto';
     font-style: normal;
-    @include font(18px, 400, 1.56, 0.03em);
+    @include font(16px, 400, 1.56, 0.03em);
 
 
     color: var(--color-white);
     background: rgba(33, 150, 243, 0.9);
 
-    .content-info:hover &,
-    .content-info:focus & {
+    .portfolio-container__content-info:hover &,
+    .portfolio-container__content-info:focus & {
         transform: translateX(0);
     }
 }
@@ -108,13 +137,13 @@
     border-top: 0;
 }
 
-.content-top-text {
+.portfolio-card__text {
     @include font(18px, 700, 2, 0.06em);
     margin-bottom: 4px;
     color: var(--primary-font-color);
 }
 
-.content-text {
+.portfolio-card__info {
     @include font(16px, 400, 1.88, null);
     color: var(--info-font-color);
 }
