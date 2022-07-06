@@ -567,10 +567,11 @@
             </ul>
           </div>
         </div>
-        <div class="subscribe">
-          <p class="subscribe__text">Подпишитесь на рассылку</p>
-          <form action="sign-up" class="subscribe__form">
-            <label for="name" for="email" class="subscribe__lable"> </label>
+        <!-- <div class="subscribe"> -->
+        <!-- <p class="subscribe__text">Подпишитесь на рассылку</p> -->
+        <form action="sign-up" class="subscribe__form">
+          <div class="subscribe__mail">
+            <label for="name" for="email" class="subscribe__lable">Подпишитесь на рассылку</label>
             <input
               type="email"
               name="email"
@@ -579,16 +580,15 @@
               class="subscribe__input"
               required
             />
-            <div class="footer__btn">
-              <button type="sign-in" class="subscribe__btn">
-                Подписаться
-                <svg class="subscribe__soc-icon" width="24" height="24">
-                  <use href="./images/symbol-defs.svg#icon-send"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <button type="sign-in" class="subscribe__btn">
+            Подписаться
+            <svg class="subscribe__soc-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+        <!-- </div> -->
       </div>
     </footer>
 
@@ -605,7 +605,7 @@
               <a href="./index.html" class="mob-menu__link link">Студия</a>
             </li>
             <li class="mob-menu__item">
-              <a href="./portfolio.html" class="mob-menu__link link">Портфолио</a>
+              <a href="./portfolio.html" class="mob-menu__link current link">Портфолио</a>
             </li>
             <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты </a></li>
           </ul>

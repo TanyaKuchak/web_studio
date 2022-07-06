@@ -22,7 +22,15 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and(min-width:768px) {
+    @media screen and(min-width:1200px) {
         justify-content: start;
+    }
+
+    @media screen and(min-width:768px) {
+        justify-content: center;
+    }
+
+    @media screen and(max-width:767px) {
+        margin-bottom: 20px;
     }
 }

@@ -10,7 +10,7 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/hero-bg-mob.jpg);
     max-width: 1600px;
-    height: 400px;
+    // height: 400px;
 
     @include retina {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -30,6 +30,8 @@
 
     @media screen and(min-width:1200px) {
         height: 600px;
+        // padding-top: 94px;
+        // padding-bottom: 94px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url(../images/hero-bg-desk.jpg);
 
@@ -39,6 +41,20 @@
         }
     }
 }
+
+.hero__container {
+    @media screen and(min-width:1200px) {
+
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+// .hero>.container {
+//     @media screen and(min-width:1200px) {
+//         height: 600px;
+//     }
+// }
 
 .hero__title {
     align-items: center;
@@ -76,6 +92,7 @@
 }
 
 .hero__btn {
+    display: inline-block;
     background-color: var(--accent-color);
     color: var(--color-white);
 

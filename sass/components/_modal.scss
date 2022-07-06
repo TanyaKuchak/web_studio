@@ -43,6 +43,14 @@
         width: 528px;
     }
 
+    @media screen and (max-width: 479px) {
+        width: 320px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
 
     padding: 40px;
     background-color: var(--color-white);
